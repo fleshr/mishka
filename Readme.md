@@ -1,6 +1,6 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Аретм Комаров](https://up.htmlacademy.ru/adaptive/21/user/1422707).
+* Студент: `fleshr`.
 * Наставник: `Неизвестно`.
 
 ---
