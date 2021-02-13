@@ -23,7 +23,7 @@
 }
 
 .main-nav__list{
-  @include list-reset;
+  @include ul-reset;
   display: flex;
   flex-direction: column;
 }

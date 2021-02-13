@@ -1,5 +1,13 @@
-@mixin list-reset {
+@mixin ul-reset {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+@mixin p-reset {
+  margin: 0;
+}
+
+@mixin h-reset {
+  margin: 0;
 }

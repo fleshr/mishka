@@ -1,7 +1,16 @@
-@import "global/variables.scss";
-@import "global/mixins.scss";
+@import 'global/variables.scss';
+@import 'global/mixins.scss';
 
-@import "global/fonts.scss";
-@import "global/global.scss";
+@import 'global/fonts.scss';
+@import 'global/global.scss';
 
-@import "blocks/page-header.scss";
+@import 'blocks/page-header.scss';
+@import 'blocks/categories.scss';
+@import 'blocks/weekly.scss';
+@import 'blocks/table.scss';
+@import 'blocks/button.scss';
+@import 'blocks/about.scss';
+@import 'blocks/reviews.scss';
+@import 'blocks/contacts.scss';
+@import 'blocks/page-footer.scss';
+@import 'blocks/socials.scss';

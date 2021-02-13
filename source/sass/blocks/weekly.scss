@@ -1,0 +1,185 @@
+.weekly__wrapper {
+  position: relative;
+  padding: 25px 30px;
+  padding-bottom: 40px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 23px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/border-snake.svg);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: auto 6px;
+  }
+}
+
+.weekly__title {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.weekly__subtitle {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $green;
+}
+
+.weekly__content {
+  margin-top: 25px;
+}
+
+.weekly__text {
+  margin: 0;
+  color: $dark-grey;
+}
+
+.weekly__table {
+  width: 100%;
+  margin-top: 15px;
+  color: $dark-grey;
+}
+
+.weekly__image-container {
+  margin-top: 30px;
+}
+
+.weekly__image {
+  display: block;
+}
+
+.weekly__price {
+  margin: 0;
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  color: $dark-grey;
+}
+
+.weekly__button {
+  margin-top: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .weekly__wrapper {
+    box-sizing: border-box;
+    width: $tablet-width;
+    padding: 40px 50px;
+    padding-bottom: 70px;
+    margin: 0 auto;
+
+    &::after {
+      background-size: auto 15px;
+    }
+  }
+
+  .weekly__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .weekly__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .weekly__subtitle {
+    width: 120px;
+    margin-top: 0;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .weekly__content {
+    overflow: hidden;
+    display: flex;
+    height: 404px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .weekly__description {
+    box-sizing: border-box;
+    width: 334px;
+    padding-right: 45px;
+  }
+
+  .weekly__image-container {
+    order: 2;
+    width: 334px;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .weekly__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .weekly__buy {
+    box-sizing: border-box;
+    width: 334px;
+    padding-right: 45px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .weekly__wrapper {
+    position: relative;
+    width: $desktop-width;
+    padding-bottom: 95px;
+
+    &::after {
+      background-size: auto 23px;
+    }
+  }
+
+  .weekly__header {
+    position: absolute;
+    height: 160px;
+  }
+
+  .weekly__title {
+    order: 2;
+  }
+
+  .weekly__subtitle {
+    box-sizing: border-box;
+    width: 175px;
+    padding: 0 30px;
+  }
+
+  .weekly__content {
+    margin: 0;
+    height: 636px;
+  }
+
+  .weekly__description {
+    width: 350px;
+    padding-right: 60px;
+    margin-top: 150px;
+    margin-left: 175px;
+  }
+
+  .weekly__buy {
+    width: 350px;
+    padding-right: 60px;
+    margin-left: 175px;
+  }
+
+  .weekly__image-container {
+    width: 525px;
+  }
+}

@@ -1,0 +1,121 @@
+.about__wrapper {
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+.about__title {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.about__list {
+  @include ul-reset;
+}
+
+.about__item {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  margin-top: 30px;
+
+  &::before {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &--flower::before{
+    content: url(../img/about-icon-1.svg);
+  }
+
+  &--money::before{
+    content: url(../img/about-icon-2.svg);
+  }
+
+  &--heart::before{
+    content: url(../img/about-icon-3.svg);
+  }
+
+  &--ball::before{
+    content: url(../img/about-icon-4.svg);
+  }
+
+  &--rocket::before{
+    content: url(../img/about-icon-5.svg);
+  }
+
+  &--present::before{
+    content: url(../img/about-icon-6.svg);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about__wrapper {
+    box-sizing: border-box;
+    width: $tablet-width;
+    padding: 50px 50px;
+    padding-bottom: 0;
+    margin: 0 auto;
+  }
+
+  .about__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .about__item {
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 40px;
+    margin-top: 60px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &::before {
+      margin-bottom: 15px;
+    }
+
+    &--flower{
+      order: 1;
+    }
+
+    &--money{
+      order: 3;
+    }
+
+    &--heart{
+      order: 5;
+    }
+
+    &--ball{
+      order: 2;
+    }
+
+    &--rocket{
+      order: 4;
+    }
+
+    &--present{
+      order: 6;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about__wrapper {
+    width: $desktop-width;
+    padding: 60px 225px;
+    padding-bottom: 0;
+  }
+
+  .about__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

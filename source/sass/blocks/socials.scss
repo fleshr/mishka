@@ -1,0 +1,28 @@
+.socials__list {
+  @include ul-reset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials__item {
+  margin: 0 15px;
+}
+
+.social__link {
+  display: block;
+  padding: 5px;
+}
+
+.social__link:focus svg,
+.social__link:hover svg {
+  fill: #231f20;
+}
+
+.social__link:active svg {
+  opacity: 0.3;
+}
+
+.social__link:hover svg {
+  fill: $hover-green;
+}

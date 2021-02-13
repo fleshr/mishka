@@ -1,0 +1,53 @@
+.contacts__wrapper {
+  position: relative;
+  padding: 40px 30px 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 23px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-image: url(../img/border-snake.svg);
+    background-position: top;
+    background-repeat: repeat-x;
+    background-size: auto 6px;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.contacts__list {
+  font-style: normal;
+  color: $dark-grey;
+}
+
+.contacts__table {
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  border-collapse: collapse;
+}
+
+.contacts__table-cell {
+  padding: 0;
+  padding: 15px 0;
+}
+
+.contacts__table-cell:first-child {
+  width: 30%;
+  vertical-align: baseline;
+}
+
+.contacts__map-image {
+  display: block;
+}
+
+.contacts__button-container {
+  padding: 40px 30px;
+}
