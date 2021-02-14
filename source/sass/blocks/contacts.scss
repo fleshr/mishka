@@ -37,11 +37,11 @@
 .contacts__table-cell {
   padding: 0;
   padding: 15px 0;
-}
 
-.contacts__table-cell:first-child {
-  width: 30%;
-  vertical-align: baseline;
+  &:first-child {
+    width: 30%;
+    vertical-align: baseline;
+  }
 }
 
 .contacts__map-image {
@@ -50,4 +50,12 @@
 
 .contacts__button-container {
   padding: 40px 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    box-sizing: border-box;
+    width: $tablet-width;
+    padding: 0 50px;
+  }
 }
