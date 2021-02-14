@@ -9,46 +9,48 @@
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <nav class="main-nav">
-          <div class="page-header__logo">
-            <a class="page-header__logo-link" href="index.html">
-              <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин &laquo;Мишка&raquo;">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <div class="main-nav__header">
+            <a class="main-nav__logo-link" href="index.html">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин Мишка">
+              </picture>
             </a>
             <button class="main-nav__toogle" type="button">
               <span class="visually-hidden">Открыть меню</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 28" width="20" height="14">
-                <path d="M0 0h40v4H0V0zM0 12h40v4H0v-4zM0 24h40v4H0v-4z"/>
-              </svg></button>
+            </button>
           </div>
           <ul class="main-nav__list main-nav__list--main">
-            <li class="main-nav__item main-nav__item--catalog">
-              <a class="main-nav__link main-nav__link--catalog" href="#">Каталог товаров</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Каталог товаров</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--knitting" href="#">Вязание на заказ</a>
+              <a class="main-nav__link" href="#">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="main-nav__list main-nav__list--sub">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--new" href="#">Новые поступления</a>
+              <a class="main-nav__link" href="#">Новые поступления</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--sale" href="#">Распродажа</a>
+              <a class="main-nav__link" href="#">Распродажа</a>
             </li>
           </ul>
           <ul class="main-nav__list main-nav__list--right">
-            <li class="main-nav__item main-nav__item--search">
-              <a class="main-nav__link main-nav__link--search" href="#">
-                <svg class="main-nav__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="18" height="18">
-                  <path fill-rule="evenodd" d="M35.6 33.2c0 1.2-1 2.2-2.2 2.2a2 2 0 01-1.5-.7L25 28a15.4 15.4 0 113-3l7 6.8c.5.5.6 1 .6 1.5zm-19.8-6.6a11 11 0 100-22 11 11 0 000 22z"/>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">
+                <svg class="main-nav__link-icon" width="20" height="18">
+                  <use href="img/sprite.svg#search-icon"/>
                 </svg>
-                <span class="main-nav__link-text main-nav__link-text--search">Поиск по сайту</span>
+                <span class="main-nav__link-text">Поиск по сайту</span>
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--cart" href="#">
-                <svg class="main-nav__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 38" width="20" height="19">
-                  <path fill-rule="evenodd" d="M40.6 16.3c0 .8-.7 1.5-1.5 1.5h-.3l-1.7 6c.3.2.6.6.6 1.1 0 .8-.6 1.5-1.4 1.5L33 38H7.6L4.3 26.4c-.8 0-1.4-.7-1.4-1.5 0-.5.3-.9.6-1.2l-1.7-6h-.3a1.5 1.5 0 110-3h6.3l6.8-13.6a1.5 1.5 0 012.7 1.4l-6.1 12.3h18.2L23.3 2.5A1.5 1.5 0 0126 1l6.8 13.7H39c.8 0 1.5.6 1.5 1.5zm-7.4 10.1H7.4L10 35h20.8l2.5-8.6zm2.4-8.6H5l1.7 5.6H34l1.6-5.6z"/>
+              <a class="main-nav__link" href="#">
+                <svg class="main-nav__link-icon" width="20" height="19">
+                  <use href="img/sprite.svg#cart-icon"/>
                 </svg>
                 <span class="main-nav__link-text">Корзина: пока пуста</span>
               </a>
@@ -213,5 +215,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>

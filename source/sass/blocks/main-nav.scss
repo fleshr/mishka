@@ -1,0 +1,256 @@
+.main-nav__header {
+  display: flex;
+  min-height: 78px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.main-nav__logo-link {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin-left: 78px;
+}
+
+.main-nav__logo-img {
+  display: block;
+}
+
+.main-nav__toogle {
+  width: 78px;
+  height: 78px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url(../img/mobile-menu-close.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-nav__list{
+  @include ul-reset;
+
+  &--main .main-nav__link {
+    padding-left: 70px;
+  }
+
+  &--sub {
+    display: none;
+  }
+}
+
+.main-nav__item {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 0 30px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 78px;
+
+  &--catalog,
+  &--knitting {
+    padding-left: 70px;
+  }
+}
+
+.main-nav__link-text {
+  margin-left: 15px;
+
+  &--search {
+    margin-left: 17px;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .main-nav {
+    &--closed .main-nav__list--main,
+    &--closed .main-nav__list--right {
+      display: none;
+    }
+
+    &--closed .main-nav__toogle {
+      background-image: url(../img/mobile-menu-open.svg);
+    }
+
+    &--nojs .main-nav__list--main,
+    &--nojs .main-nav__list--right {
+      display: block;
+    }
+
+    &--nojs .main-nav__toogle {
+      display: none;
+    }
+
+    &--nojs .main-nav__logo-link {
+      margin-right: 78px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    position: relative;
+    display: flex;
+    min-height: 88px;
+  }
+
+  .main-nav__header {
+    border: none;
+  }
+
+  .main-nav__logo-link {
+    margin-left: 0;
+  }
+
+  .main-nav__logo-img {
+    width: 113px;
+    height: 46px;
+  }
+
+  .main-nav__toogle {
+    display: none;
+  }
+
+  .main-nav__list {
+    flex-direction: row;
+
+    &--main {
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      bottom: -60px;
+    }
+
+    &--main .main-nav__item:not(:first-child) {
+      margin-left: 35px;
+    }
+
+    &--main .main-nav__link {
+      padding: 0;
+      font-size: 15px;
+      line-height: 60px;
+    }
+
+    &--right {
+      display: flex;
+      margin-left: auto;
+    }
+
+    &--right .main-nav__link {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 35px;
+      line-height: 24px;
+    }
+
+    &--right .main-nav__item {
+      border-left: 1px solid $light-grey;
+    }
+
+    &--right .main-nav__item:last-child {
+      padding-left: 35px;
+    }
+
+    &--right .main-nav__item:last-child .main-nav__link {
+      padding: 0;
+    }
+
+    &--right .main-nav__item:first-child .main-nav__link-text {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+  }
+
+  .main-nav__item {
+    border: none;
+  }
+
+  .main-nav__link-text {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    justify-content: space-between;
+  }
+
+  .main-nav__header {
+    order: 2;
+  }
+
+  .main-nav__logo-img {
+    width: 149px;
+    height: 72px;
+  }
+
+  .main-nav__list {
+    display: flex;
+
+    &--main {
+      position: initial;
+      order: 1;
+    }
+
+    &--main .main-nav__item:not(:last-child) {
+      border-right: 1px solid $light-grey;
+    }
+
+    &--main .main-nav__item {
+      padding: 0 35px;
+    }
+
+    &--main .main-nav__item:first-child {
+      padding-left: 0;
+    }
+
+    &--main .main-nav__item:last-child {
+      padding-right: 0;
+    }
+
+    &--main .main-nav__item:not(:first-child) {
+      margin-left: 0;
+    }
+
+    &--main .main-nav__link {
+      padding: 0;
+      margin: 0;
+      font-size: 17px;
+      line-height: 88px;
+    }
+
+    &--sub {
+      position: absolute;
+      display: flex;
+      z-index: 1;
+      bottom: -60px;
+      font-size: 15px;
+      line-height: 60px;
+    }
+
+    &--sub .main-nav__link {
+      padding: 0;
+      font-size: 15px;
+      line-height: 60px;
+    }
+
+    &--sub .main-nav__item:not(:first-child) {
+      margin-left: 60px;
+    }
+
+    &--right {
+      order: 3;
+      margin-left: 0;
+    }
+  }
+}
