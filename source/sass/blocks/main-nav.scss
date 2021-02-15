@@ -10,6 +10,15 @@
   justify-content: center;
   align-items: center;
   margin-left: 78px;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__logo-img {
@@ -50,9 +59,39 @@
   font-size: 17px;
   line-height: 78px;
 
-  &--catalog,
-  &--knitting {
-    padding-left: 70px;
+  & svg {
+    opacity: 0.2;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--icon:focus,
+  &--icon:hover {
+    opacity: 1;
+  }
+
+  &--icon:focus svg,
+  &--icon:hover svg {
+    opacity: 1;
+    fill: #63d1bb;
+  }
+
+  &--icon:focus span,
+  &--icon:hover span {
+    opacity: 0.6;
+    fill: #63d1bb;
+  }
+
+  &--icon:active svg,
+  &--icon:active span  {
+    opacity: 0.3;
   }
 }
 

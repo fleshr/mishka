@@ -6,23 +6,24 @@
 }
 
 .socials__item {
-  margin: 0 15px;
+  margin: 0 5px;
 }
 
 .social__link {
   display: block;
-  padding: 5px;
+  padding: 15px;
+}
+
+.social__link svg {
+  display: block;
+  fill: #231f20;
 }
 
 .social__link:focus svg,
 .social__link:hover svg {
-  fill: #231f20;
+  fill: $hover-green;
 }
 
 .social__link:active svg {
   opacity: 0.3;
-}
-
-.social__link:hover svg {
-  fill: $hover-green;
 }
