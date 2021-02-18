@@ -17,22 +17,24 @@
 
 .reviews__author {
   margin: 0;
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 17px;
+}
+
+.reviews__author-name {
+  line-height: 24px;
 }
 
 .reviews__author-contact {
   display: block;
+  line-height: 30px;
   color: $dark-grey;
 }
 
 .reviews__controls {
   display: flex;
-}
-
-.reviews__controls {
   margin: 0;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .reviews__controls-button {
@@ -40,6 +42,7 @@
   box-sizing: border-box;
   height: 50px;
   width: 50%;
+  padding: 0;
   background-color: transparent;
   border: 1px solid #ebebeb;
 
@@ -60,9 +63,19 @@
   &--prev::after {
     border-right: none;
   }
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.reviews__controls-button-icon {
+.reviews__controls-button svg {
   vertical-align: middle;
 }
 
@@ -75,7 +88,7 @@
     box-sizing: border-box;
     width: $tablet-width;
     margin: 0 auto;
-    padding: 75px 0 50px;
+    padding: 80px 0 70px;
   }
 
   .reviews__inner {
@@ -83,7 +96,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 75px 50px 50px;
+    padding: 75px 50px 45px;
     background-image: url(../img/reviews-bg.jpg);
     background-position: left;
     background-repeat: no-repeat;
@@ -96,15 +109,9 @@
     line-height: 50px;
   }
 
-  .reviews__button {
-    order: 2;
-    margin: 0;
-    width: 175px;
-  }
-
   .reviews__text {
     order: 3;
-    margin-top: 45px;
+    margin-top: 50px;
     font-size: 17px;
   }
 
@@ -119,7 +126,8 @@
 
   .reviews__controls {
     order: 5;
-    width: 175px;
+    width: 170px;
+    margin-bottom: 5px;
     align-self: flex-end;
   }
 
@@ -130,11 +138,17 @@
       content: none;
     }
   }
+
+  .reviews__button {
+    order: 2;
+    margin: 0;
+    width: 175px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .reviews__wrapper {
-    padding: 85px 50px 50px;
+    padding: 90px 50px 65px;
     width: $desktop-width;
   }
 
@@ -143,7 +157,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 75px 0 95px 175px;
+    padding: 70px 0 95px 175px;
     background-image: url(../img/reviews-bg.jpg);
     background-position: left;
     background-repeat: no-repeat;
@@ -153,6 +167,10 @@
   .reviews__title {
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .reviews__text {
+    margin-top: 50px;
   }
 
   .reviews__author {

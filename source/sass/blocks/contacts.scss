@@ -30,7 +30,7 @@
 }
 
 .contacts__list {
-  margin-top: 20px;
+  margin-top: 25px;
   font-style: normal;
   color: $dark-grey;
 }
@@ -40,7 +40,7 @@
   margin: 0;
 
   &:not(:first-child) {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 }
 
@@ -112,7 +112,7 @@
   .contacts__list {
     display: flex;
     font-size: 17px;
-    margin-top: 45px;
+    margin-top: 50px;
   }
 
   .contacts__item {
@@ -174,7 +174,7 @@
     width: 100%;
 
     &:not(:first-child) {
-      margin-top: 25px;
+      margin-top: 30px;
     }
   }
 

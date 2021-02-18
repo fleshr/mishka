@@ -61,7 +61,7 @@
 
 .weekly__price {
   margin: 0;
-  margin-top: 25px;
+  margin-top: 20px;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
@@ -110,13 +110,14 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 55px;
   }
 
   .weekly__description {
     box-sizing: border-box;
     width: 334px;
     padding-right: 45px;
+    margin-top: -5px;
   }
 
   .weekly__text {
@@ -149,6 +150,10 @@
   .weekly__price {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .weekly__button {
+    margin-top: 30px;
   }
 }
 
