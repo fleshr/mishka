@@ -1,0 +1,130 @@
+.product-card__image-link {
+  display: block;
+}
+
+.product-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-card__info {
+  padding: 28px;
+  padding-bottom: 20px;
+  box-shadow:
+    inset 0 0 0 1px #ececec,
+    inset 0 0 0 2px #f5f5f5;
+}
+
+.product-card__title {
+  margin: 0;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.product__card-desc {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.product__card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  margin: 0;
+  margin-top: 20px;
+  border-top: 1px solid #ebebeb;
+}
+
+.product__card-price {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.product__card-button {
+  padding: 10px;
+  margin: 0;
+  margin-right: -10px;
+  border: none;
+  background-color: transparent;
+}
+
+.product__card-button svg {
+  display: block;
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.product__card-button svg:focus,
+.product__card-button svg:hover {
+  cursor: pointer;
+  fill: rgba(99, 209, 187, 1);
+}
+
+.product__card-button svg:active {
+  fill: rgba(99, 209, 187, 0.3);
+}
+
+@media (min-width: $tablet-width) {
+  .product-card {
+    display: flex;
+  }
+
+  .product-card__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .product__card-desc {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .product-card__image-link {
+    width: 50%;
+  }
+
+  .product-card__info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 25px 35px 20px;
+  }
+
+  .product__card-footer {
+    margin-top: auto;
+  }
+
+  .product__card-price {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-card {
+    width: 315px;
+    flex-direction: column;
+  }
+
+  .product-card__image-link {
+    width: 100%;
+  }
+
+  .product-card__info {
+    box-sizing: border-box;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .product__card-desc {
+    margin-bottom: 15px;
+  }
+
+  .product__card-footer {
+    margin-top: auto;
+  }
+}
