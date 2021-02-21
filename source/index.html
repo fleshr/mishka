@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="page-header">
@@ -13,9 +13,9 @@
           <div class="main-nav__header">
             <a class="main-nav__logo-link" href="index.html">
               <picture>
-                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин Мишка">
+                <source media="(min-width: 1150px)" srcset="img/general/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/general/logo-tablet.svg">
+                <img class="main-nav__logo-img" src="img/general/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин Мишка">
               </picture>
             </a>
             <button class="main-nav__toogle" type="button">
@@ -42,7 +42,7 @@
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--icon" href="#">
                 <svg width="20" height="18">
-                  <use href="img/sprite.svg#search-icon"/>
+                  <use href="img/general/sprite.svg#search-icon"/>
                 </svg>
                 <span class="main-nav__link-text">Поиск по сайту</span>
               </a>
@@ -50,7 +50,7 @@
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--icon" href="#">
                 <svg width="20" height="19">
-                  <use href="img/sprite.svg#cart-icon"/>
+                  <use href="img/general/sprite.svg#cart-icon"/>
                 </svg>
                 <span class="main-nav__link-text">Корзина: пока пуста</span>
               </a>
@@ -108,7 +108,14 @@
               </table>
             </div>
             <div class="weekly__image-container">
-              <img class="weekly__image" src="img/triple-set-w260.jpg" srcset="img/triple-set-w260.jpg 260w, img/triple-set-w333.jpg 333w, img/triple-set-w525.jpg 525w" alt="Вязаные корзинки">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/desktop/triple-set.webp 1x, img/desktop/triple-set@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/triple-set.webp 1x, img/tablet/triple-set@2x.webp 2x">
+                <source type="image/webp" srcset="img/mobile/triple-set.webp 1x, img/mobile/triple-set@2x.webp 2x">
+                <source media="(min-width: 1150px)" srcset="img/desktop/triple-set.jpg 1x, img/desktop/triple-set@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/tablet/triple-set.jpg 1x, img/tablet/triple-set@2x.jpg 2x">
+                <img class="weekly__image" src="img/mobile/triple-set.jpg" srcset="img/mobile/triple-set@2x.jpg 2x" alt="Вязаные корзинки">
+              </picture>
             </div>
             <div class="weekly__buy">
               <p class="weekly__price">Цена: 990 руб.</p>
@@ -143,13 +150,13 @@
               <button class="reviews__controls-button reviews__controls-button--prev">
                 <span class="visually-hidden">Предыдущий отзыв</span>
                 <svg width="50" height="26">
-                  <use href="img/sprite.svg#reviews-arrow-prev"/>
+                  <use href="img/general/sprite.svg#reviews-arrow-prev"/>
                 </svg>
               </button>
               <button class="reviews__controls-button reviews__controls-button--next">
                 <span class="visually-hidden">Предыдущий отзыв</span>
                 <svg width="50" height="26">
-                  <use href="img/sprite.svg#reviews-arrow-next"/>
+                  <use href="img/general/sprite.svg#reviews-arrow-next"/>
                 </svg>
               </button>
             </p>
@@ -170,7 +177,7 @@
               </p>
               <p class="contacts__item">
                 <span class="contacts__item-name">адрес:</span>
-                <span class="contacts__item-text">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</a></span>
+                <span class="contacts__item-text">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</span>
               </p>
             </address>
           </div>
@@ -180,16 +187,15 @@
           <div class="contacts__container contacts__container--button">
             <a class="contacts__button button" href="#">Напишите нам</a>
           </div>
-      </div>
+        </div>
       </section>
-    </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <a class="page-footer__logo-link" href="index.html">
             <svg width="102" height="34">
-              <use href="img/sprite.svg#footer-logo"/>
+              <use href="img/general/sprite.svg#footer-logo"/>
             </svg>
           </a>
         </div>
@@ -199,7 +205,7 @@
               <a class="social__link" href="#">
                 <span class="visually-hidden">Инстаграм</span>
                 <svg width="22" height="21">
-                  <use href="img/sprite.svg#instagram-icon"/>
+                  <use href="img/general/sprite.svg#instagram-icon"/>
                 </svg>
               </a>
             </li>
@@ -207,7 +213,7 @@
               <a class="social__link" href="#">
                 <span class="visually-hidden">Фейсбук</span>
                 <svg width="15" height="28">
-                  <use href="img/sprite.svg#facebook-icon"/>
+                  <use href="img/general/sprite.svg#facebook-icon"/>
                 </svg>
               </a>
             </li>
@@ -215,7 +221,7 @@
               <a class="social__link" href="#">
                 <span class="visually-hidden">Твиттер</span>
                 <svg width="23" height="20">
-                  <use href="img/sprite.svg#twitter-icon"/>
+                  <use href="img/general/sprite.svg#twitter-icon"/>
                 </svg>
               </a>
             </li>
@@ -225,11 +231,11 @@
           <b class="page-footer__copyright-text">Разработано</b>
           <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">в HTML Academy</span>
-            <img src="img/htmlacademy-icon.svg" width="27" height="34" alt="HTML Academy">
+            <img src="img/general/htmlacademy-icon.svg" width="27" height="34" alt="HTML Academy">
           </a>
         </p>
       </div>
     </footer>
-    <script src="js/mobile-menu.js"></script>
+    <script src="js/mobile-menu.min.js"></script>
   </body>
 </html>

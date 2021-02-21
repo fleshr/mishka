@@ -97,10 +97,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 75px 50px 45px;
-    background-image: url(../img/reviews-bg.jpg);
+    background-image: url(../img/global/reviews-bg.jpg);
     background-position: left;
     background-repeat: no-repeat;
     background-size: auto 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/global/reviews-bg@2x.jpg);
+    }
   }
 
   .reviews__title {
@@ -153,15 +157,7 @@
   }
 
   .reviews__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     padding: 70px 0 95px 175px;
-    background-image: url(../img/reviews-bg.jpg);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
   }
 
   .reviews__title {
