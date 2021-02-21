@@ -31,12 +31,12 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  background-image: url(../img/general/mobile-menu-close.svg);
+  background-image: url("../img/general/mobile-menu-close.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.main-nav__list{
+.main-nav__list {
   @include ul-reset;
 
   &--main .main-nav__link {
@@ -90,7 +90,7 @@
   }
 
   &--icon:active svg,
-  &--icon:active span  {
+  &--icon:active span {
     opacity: 0.3;
   }
 }
@@ -111,7 +111,7 @@
     }
 
     &--closed .main-nav__toogle {
-      background-image: url(../img/general/mobile-menu-open.svg);
+      background-image: url("../img/general/mobile-menu-open.svg");
     }
 
     &--nojs .main-nav__list--main,

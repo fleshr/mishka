@@ -26,28 +26,28 @@
     margin-bottom: 15px;
   }
 
-  &--flower::before{
-    content: url(../img/general/about-icon-1.svg);
+  &--flower::before {
+    content: url("../img/general/about-icon-1.svg");
   }
 
-  &--money::before{
-    content: url(../img/general/about-icon-2.svg);
+  &--money::before {
+    content: url("../img/general/about-icon-2.svg");
   }
 
-  &--heart::before{
-    content: url(../img/general/about-icon-3.svg);
+  &--heart::before {
+    content: url("../img/general/about-icon-3.svg");
   }
 
-  &--ball::before{
-    content: url(../img/general/about-icon-4.svg);
+  &--ball::before {
+    content: url("../img/general/about-icon-4.svg");
   }
 
-  &--rocket::before{
-    content: url(../img/general/about-icon-5.svg);
+  &--rocket::before {
+    content: url("../img/general/about-icon-5.svg");
   }
 
-  &--present::before{
-    content: url(../img/general/about-icon-6.svg);
+  &--present::before {
+    content: url("../img/general/about-icon-6.svg");
   }
 }
 
@@ -79,27 +79,27 @@
     font-size: 20px;
     line-height: 22px;
 
-    &--flower{
+    &--flower {
       order: 1;
     }
 
-    &--money{
+    &--money {
       order: 3;
     }
 
-    &--heart{
+    &--heart {
       order: 5;
     }
 
-    &--ball{
+    &--ball {
       order: 2;
     }
 
-    &--rocket{
+    &--rocket {
       order: 4;
     }
 
-    &--present{
+    &--present {
       order: 6;
     }
   }

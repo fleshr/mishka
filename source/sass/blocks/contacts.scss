@@ -2,13 +2,13 @@
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 23px;
     top: 0;
     left: 0;
     right: 0;
-    background-image: url(../img/general/border-snake.svg);
+    background-image: url("../img/general/border-snake.svg");
     background-position: top;
     background-repeat: repeat-x;
     background-size: auto 6px;
@@ -84,7 +84,7 @@
     }
 
     &::after {
-      content: url(../img/general/contacts-flag.svg);
+      content: url("../img/general/contacts-flag.svg");
       width: 47px;
       height: 82px;
       position: absolute;
@@ -179,11 +179,8 @@
   }
 
   .contacts__map {
-    width: 50%;
-  }
-
-  .contacts__map {
     order: 2;
+    width: 50%;
   }
 
   .contacts__button {

@@ -47,7 +47,7 @@
   border: 1px solid #ebebeb;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -97,13 +97,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 75px 50px 45px;
-    background-image: url(../img/global/reviews-bg.jpg);
+    background-image: url("../img/global/reviews-bg.jpg");
     background-position: left;
     background-repeat: no-repeat;
     background-size: auto 100%;
 
     @media (min-resolution: 2dppx) {
-      background-image: url(../img/global/reviews-bg@2x.jpg);
+      background-image: url("../img/global/reviews-bg@2x.jpg");
     }
   }
 
