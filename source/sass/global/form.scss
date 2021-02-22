@@ -1,0 +1,348 @@
+.form__wrapper {
+  padding: 0 30px;
+}
+
+.form__text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
+  color: #444444;
+}
+
+.form__fieldset {
+  padding: 0;
+  margin: 0;
+  margin-top: 35px;
+  border: 0;
+
+  &--type {
+    margin-top: 20px;
+  }
+
+  &--contacts {
+    margin-top: 30px;
+  }
+}
+
+.form__legend {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #63d1bb;
+
+  &::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    margin-left: 25px;
+    background-color: #63d1bb;
+  }
+
+  .form__fieldset--contacts & {
+    margin-bottom: 10px;
+  }
+}
+
+.form__list {
+  @include ul-reset;
+  margin-top: 25px;
+
+  .form__fieldset--contacts & {
+    margin-top: 0;
+  }
+}
+
+.form__item:not(:first-child) {
+  margin-top: 20px;
+
+  .form__fieldset--contacts & {
+    margin-top: 30px;
+  }
+}
+
+.form__input[type="radio"],
+.form__input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form__label {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  display: inline-flex;
+  vertical-align: top;
+  align-items: center;
+
+  .form__input[type="radio"] + &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+    border-radius: 50%;
+    border: 2px solid #434343;
+  }
+
+  .form__input[type="radio"] + &:focus::before,
+  .form__input[type="radio"] + &:hover::before {
+    border-color: #61d1b9;
+  }
+
+  .form__input[type="radio"] + &:active::before {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .form__input[type="radio"]:checked + &::before {
+    background-image: radial-gradient(circle, #61d1b9 8px, transparent 9px);
+  }
+
+  .form__input[type="checkbox"] + &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+    border: 2px solid #434343;
+    box-shadow: inset 0 0 0 1px #a1a1a1;
+  }
+
+  .form__input[type="checkbox"] + &:focus::before,
+  .form__input[type="checkbox"] + &:hover::before {
+    border-color: #61d1b9;
+    box-shadow: inset 0 0 0 1px #b0e8dc;
+  }
+
+  .form__input[type="checkbox"] + &:active::before {
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 0 1px #e3e3e3;
+  }
+
+  .form__input[type="checkbox"]:checked + &::before {
+    background-image: url("../img/general/checkbox-check.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.form__input[type="text"],
+.form__input[type="tel"],
+.form__input[type="email"] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 0;
+  font: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  color: #444444;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #000000;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:focus,
+  &:hover {
+    border-color: #61d1b9;
+  }
+
+  .form__fieldset--user & {
+    margin-top: -10px;
+  }
+}
+
+.form__textarea {
+  display: block;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  width: 100%;
+  font: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  color: #444444;
+  border: 2px solid #434343;
+  box-shadow: inset 0 0 0 1px #a1a1a1;
+  resize: vertical;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.form__footer {
+  margin-top: 10px;
+}
+
+.form__required-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #444444;
+}
+
+.form__button {
+  width: 100%;
+  margin-top: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .form__wrapper {
+    box-sizing: border-box;
+    width: $tablet-width;
+    padding: 0 50px;
+    margin: 0 auto;
+
+    .form__fieldset & {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  .form__text {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form__fieldset {
+    margin: 0;
+    padding: 50px 0;
+
+    &--color {
+      padding-top: 55px;
+      background-color: #f1f1f1;
+    }
+
+    &--contacts {
+      background-color: #f1f1f1;
+    }
+  }
+
+  .form__legend {
+    width: 25%;
+    align-items: flex-start;
+
+    &::after {
+      content: none;
+    }
+
+    .form__fieldset--contacts & {
+      margin: 0;
+    }
+  }
+
+  .form__list {
+    width: 75%;
+    margin: 0;
+
+    .form__fieldset--color & {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 25px;
+    }
+
+    .form__fieldset--contacts & {
+      width: 100%;
+    }
+  }
+
+  .form__item {
+    &:not(:first-child) {
+      margin-top: 25px;
+    }
+
+    .form__fieldset--color &:not(:first-child) {
+      margin-top: 0;
+    }
+
+    .form__fieldset--user & {
+      display: flex;
+    }
+
+    .form__fieldset--contacts & {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  .form__input[type="text"],
+  .form__input[type="tel"],
+  .form__input[type="email"] {
+    .form__fieldset--user & {
+      margin-left: 25px;
+    }
+
+    .form__fieldset--contacts & {
+      width: 75%;
+    }
+  }
+
+  .form__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+
+  .form__required-text {
+    order: 2;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form__button {
+    order: 1;
+    width: 230px;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__wrapper {
+    width: $desktop-width;
+  }
+
+  .form__text {
+    padding: 0 17%;
+  }
+
+  .form__legend {
+    box-sizing: border-box;
+    width: 17%;
+    padding-left: 60px;
+
+    .form__fieldset--contacts & {
+      width: 20.5%;
+    }
+  }
+
+  .form__list {
+    box-sizing: border-box;
+    width: 83%;
+    padding-right: 17%;
+
+    .form__fieldset--color & {
+      grid-template-columns: 1fr 1fr 1fr;
+      padding-right: 10%;
+    }
+  }
+
+  .form__input[type="text"],
+  .form__input[type="tel"],
+  .form__input[type="email"] {
+    .form__fieldset--contacts & {
+      width: 79.5%;
+    }
+  }
+
+  .form__footer {
+    padding: 0 17%;
+  }
+}

@@ -6,6 +6,7 @@
   width: 100%;
   padding-top: 56.25%;
   position: relative;
+  background-color: #ebebeb;
 }
 
 .how-made__video iframe {
@@ -122,7 +123,6 @@
 
   .how-made__video {
     padding: 0;
-    background-color: #ebebeb;
     grid-area: video;
   }
 
