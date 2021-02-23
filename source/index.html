@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <header class="page-header">
@@ -119,7 +121,7 @@
             </div>
             <div class="weekly__buy">
               <p class="weekly__price">Цена: 990 руб.</p>
-              <a class="weekly__button button" href="form.html">Заказать</a>
+              <a class="weekly__button button add-to-cart" href="form.html">Заказать</a>
             </div>
           </div>
         </div>
@@ -236,6 +238,30 @@
         </p>
       </div>
     </footer>
+    <section class="modal-cart">
+      <div class="modal-cart__content">
+        <h2 class="modal-cart__title">Добавить в корзину</h2>
+        <form class="modal-cart__form" action="https://echo.htmlacademy.ru/">
+          <p class="modal-cart__form-title">Выберите размер:</p>
+          <ul class="modal-cart__form-list">
+            <li class="modal-cart__form-item">
+              <input class="modal-cart__form-input" type="radio" name="size" value="size-s" id="size-s" checked>
+              <label class="modal-cart__form-label" for="size-s">S</label>
+            </li>
+            <li class="modal-cart__form-item">
+              <input class="modal-cart__form-input" type="radio" name="size" value="size-m" id="size-m">
+              <label class="modal-cart__form-label" for="size-m">M</label>
+            </li>
+            <li class="modal-cart__form-item">
+              <input class="modal-cart__form-input" type="radio" name="size" value="size-l" id="size-l">
+              <label class="modal-cart__form-label" for="size-l">L</label>
+            </li>
+          </ul>
+          <button class="modal-cart__form-button">Добавить</button>
+        </form>
+      </div>
+    </section>
     <script src="js/mobile-menu.min.js"></script>
+    <script src="js/modal-cart.min.js"></script>
   </body>
 </html>

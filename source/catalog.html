@@ -83,7 +83,7 @@
                 <p class="product__card-desc">Рост 30 см, вес 200 г</p>
                 <p class="product__card-footer">
                   <b class="product__card-price">1 200 руб.</b>
-                  <button class="product__card-button" type="button">
+                  <button class="product__card-button add-to-cart" type="button">
                     <span class="visually-hidden">Корзина</span>
                     <svg width="20" height="19">
                       <use href="img/general/sprite.svg#cart-icon"/>
@@ -110,7 +110,7 @@
                 <p class="product__card-desc">Диаметр 15 см, высота 10 см</p>
                 <p class="product__card-footer">
                   <b class="product__card-price">690 руб.</b>
-                  <button class="product__card-button" type="button">
+                  <button class="product__card-button add-to-cart" type="button">
                     <span class="visually-hidden">Корзина</span>
                     <svg width="20" height="19">
                       <use href="img/general/sprite.svg#cart-icon"/>
@@ -137,7 +137,7 @@
                 <p class="product__card-desc">Диаметр 30 см, высота 30 см</p>
                 <p class="product__card-footer">
                   <b class="product__card-price">1 500 руб.</b>
-                  <button class="product__card-button" type="button">
+                  <button class="product__card-button add-to-cart" type="button">
                     <span class="visually-hidden">Корзина</span>
                     <svg width="20" height="19">
                       <use href="img/general/sprite.svg#cart-icon"/>
@@ -151,13 +151,15 @@
       </section>
       <section class="how-made">
         <div class="how-made__wrapper">
-          <h2 class="how-made__title">Процесс производства</h2>
-          <div class="how-made__video">
-            <iframe width="260" height="147" src="https://www.youtube.com/embed/POX-RofpKtM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="how-made__content">
-            <p class="how-made__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="how-made__button button" href="#">Сделать заказ</a>
+          <div class="how-made__inner">
+            <h2 class="how-made__title">Процесс производства</h2>
+            <div class="how-made__video">
+              <iframe width="260" height="147" src="https://www.youtube.com/embed/POX-RofpKtM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="how-made__content">
+              <p class="how-made__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+              <a class="how-made__button button" href="#">Сделать заказ</a>
+            </div>
           </div>
         </div>
       </section>
@@ -208,6 +210,30 @@
         </p>
       </div>
     </footer>
+    <section class="modal-cart">
+      <div class="modal-cart__content">
+        <h2 class="modal-cart__title">Добавить в корзину</h2>
+        <form class="modal-cart__form" action="https://echo.htmlacademy.ru/">
+          <p class="modal-cart__form-title">Выберите размер:</p>
+          <ul class="modal-cart__form-list">
+            <li class="modal-cart__form-item">
+              <input class="modal-cart__form-input" type="radio" name="size" value="size-s" id="size-s" checked>
+              <label class="modal-cart__form-label" for="size-s">S</label>
+            </li>
+            <li class="modal-cart__form-item">
+              <input class="modal-cart__form-input" type="radio" name="size" value="size-m" id="size-m">
+              <label class="modal-cart__form-label" for="size-m">M</label>
+            </li>
+            <li class="modal-cart__form-item">
+              <input class="modal-cart__form-input" type="radio" name="size" value="size-l" id="size-l">
+              <label class="modal-cart__form-label" for="size-l">L</label>
+            </li>
+          </ul>
+          <button class="modal-cart__form-button">Добавить</button>
+        </form>
+      </div>
+    </section>
     <script src="js/mobile-menu.min.js"></script>
+    <script src="js/modal-cart.min.js"></script>
   </body>
 </html>

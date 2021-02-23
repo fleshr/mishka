@@ -1,0 +1,114 @@
+.modal-cart {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal-cart__content {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 30px;
+  padding-bottom: 45px;
+  background-color: #ffffff;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal-cart__title {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal-cart__form {
+  margin-top: 10px;
+}
+
+.modal-cart__form-title {
+  margin: 0;
+  font-size: 15px;
+  line-height: 30px;
+  color: #444444;
+  text-align: center;
+}
+
+.modal-cart__form-list {
+  @include ul-reset;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.modal-cart__form-item {
+  width: 32%;
+}
+
+.modal-cart__form-input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal-cart__form-label {
+  display: block;
+  padding: 17px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  color: #444444;
+  text-transform: uppercase;
+  border: 2px solid #ececec;
+  box-shadow: inset 0 0 0 1px #f5f5f5;
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    border: 2px solid #c6c6c6;
+    box-shadow: inset 0 0 0 1px #e3e3e3;
+  }
+
+  .modal-cart__form-input:checked + & {
+    border: 2px solid #63d1bb;
+    box-shadow: inset 0 0 0 1px #b1e8dd;
+  }
+}
+
+.modal-cart__form-button {
+  width: 100%;
+  padding: 17px;
+  margin-top: 30px;
+  font: inherit;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #63d1bb;
+  border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-cart__content {
+    box-sizing: content-box;
+    width: 350px;
+    padding: 40px 110px 45px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

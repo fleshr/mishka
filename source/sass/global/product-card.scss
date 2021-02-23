@@ -1,3 +1,12 @@
+.product-card:focus,
+.product-card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:active {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
 .product-card__image-link {
   display: block;
 }
@@ -20,6 +29,15 @@
   margin: 0;
   font-size: 17px;
   line-height: 24px;
+}
+
+.product-card__title-link:focus,
+.product-card__title-link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.product-card__title-link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .product__card-desc {
@@ -58,13 +76,17 @@
   fill: rgba(0, 0, 0, 0.2);
 }
 
-.product__card-button svg:focus,
-.product__card-button svg:hover {
+.product__card-button:focus,
+.product__card-button:hover {
   cursor: pointer;
+}
+
+.product__card-button:focus svg,
+.product__card-button:hover svg {
   fill: rgba(99, 209, 187, 1);
 }
 
-.product__card-button svg:active {
+.product__card-button:active svg {
   fill: rgba(99, 209, 187, 0.3);
 }
 

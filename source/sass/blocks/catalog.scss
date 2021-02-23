@@ -11,25 +11,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .page-main__header {
-    position: relative;
-    padding: 95px 0 85px;
-    font-size: 43px;
-    line-height: 50px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      height: 20px;
-      left: 0;
-      right: 0;
-      bottom: -4px;
-      background-image: url("../img/general/border-wave.svg");
-      background-repeat: repeat-x;
-      background-size: auto 100%;
-    }
-  }
-
   .catalog__wrapper {
     box-sizing: border-box;
     width: $tablet-width;
